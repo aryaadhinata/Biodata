@@ -1,0 +1,74 @@
+/*
+Warna yang digunakan untuk website ini adalah:
+#400FF2 , #150940 , #30168C , #1F0E59 , #D2F25C
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    background: linear-gradient();
+}
+
+table{
+    border-radius: 10px;
+    width: 300px;
+    height: 40px;
+}
+.tbl1{
+    background-color: #400FF2;
+}
+.tbl2{
+    background-color: #150940;
+}
+.tbl3{
+    background-color: #30168C;
+}
+.tbl4{
+    background-color: #1F0E59;
+}
+.tbl5{
+    background-color: #D2F25C;
+}
+
+.artikel {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav  {
+    width: 50% auto;
+    flex-wrap: wrap;
+    background-color: #298dff;
+    height: fit-content;
+    color: white;
+}
+
+nav img {
+    border-radius: 45%;
+    padding: 5%;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+article {
+    float: right;
+    width: 100%;
+}
+
+article h3 {
+    background-color: #5dd6e6;
+    color: #3936e7;
+    padding-left: 5%;
+}
+
+footer {
+    background-color: #3936e7;
+    color: #e2f1de;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
