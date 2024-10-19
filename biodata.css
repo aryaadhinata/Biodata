@@ -6,7 +6,7 @@ Warna yang digunakan untuk website ini adalah:
 body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
-    background: linear-gradient();
+    background: linear-gradient(#400FF2, #1F0E59);
 }
 
 table{
@@ -30,27 +30,57 @@ table{
     background-color: #D2F25C;
 }
 
+.clock {
+    font-size: 75%;
+    color: #150940;
+    background-color: #D2F25C;
+    width: 100% auto;
+    height: 25% auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    border-radius: 10px;
+}
+
+.jam{
+    border-collapse: separate;
+    border-spacing: 10px 0;
+    width: 100%;
+}
+
+.jam td{
+    text-align: center;
+}
+
 .artikel {
     width: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav  {
-    width: 50% auto;
-    flex-wrap: wrap;
-    background-color: #298dff;
-    height: fit-content;
-    color: white;
+    width: 100%;
+    background: linear-gradient(#150940, #30168f);
+    height: fit-content auto;
+    border-radius: 5%;
+    padding: 5%;
+    margin: 0 auto; 
 }
 
 nav img {
-    border-radius: 45%;
-    padding: 5%;
+    border-radius:10%;
     width: 50%;
+    max-width: 250px;
     display: block;
     margin: 0 auto;
+    padding: 10%;
+}
+
+.profile{
+    color: #D2F25C ;
+    text-align: center;
+    font-size: 150%;
 }
 
 article {
