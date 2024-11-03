@@ -5,7 +5,7 @@ Warna yang digunakan untuk website ini adalah:
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(#400FF2, #1F0E59);
 }
 
@@ -31,7 +31,7 @@ table{
 }
 
 .clock {
-    font-size: 75%;
+    font-size: 20px;
     color: #150940;
     background-color: #D2F25C;
     height: 25% auto;
@@ -39,6 +39,16 @@ table{
     justify-content: space-between;
     padding: 0 10%;
     border-radius: 10px;
+    animation: jam 2s cubic-bezier(0.5, 0, 0.75, 0) 1.5s 1 reverse none;
+}
+
+@keyframes jam {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100px);
+    }
 }
 
 .jam{
@@ -51,46 +61,54 @@ table{
     text-align: center;
 }
 
-.artikel {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-nav  {
+.artikel{
     background: linear-gradient(#150940, #30168f);
-    height: fit-content;
+    height: max-content;
     border-radius: 5%;
     padding: 5%;
-    margin: 1% ;
+    margin-top: 2% ;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    animation: artikel 2s cubic-bezier(0.5, 0, 0.75, 0) 1.5s 1 reverse none;
 }
 
-nav img {
+@keyframes artikel {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+.artikel img {
     border-radius:10%;
     width: 50%;
     max-width: 250px;
     display: block;
     margin: 0 auto;
-    padding: 10%;
+    -webkit-box-shadow:0px 0px 100px 20px rgba(64,15,242,0.5);
+    -moz-box-shadow: 0px 0px 100px 20px rgba(64,15,242,0.5);
+    box-shadow: 0px 0px 100px 20px rgba(64,15,242,0.5);
 }
 
-.profile{
+.text_profile{
+    padding-top: 5%;
     color: #D2F25C ;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     font-size: 150%;
 }
 
-article {
-    float: right;
-    width: 100%;
-}
-
-footer {
-    background-color: #3936e7;
-    color: #e2f1de;
-    padding: 2%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media (min-width: 768px) {
+    .artikel {
+        flex-direction: row; 
+        align-items: center;
+    }
+    .text_profile {
+        padding-top: 0;
+        padding-left: 5%;
+        text-align: left;
+    }
 }

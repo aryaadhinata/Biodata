@@ -1,5 +1,3 @@
-alert(`halo selamat datang maaf tampilannya belum sempurna`);
-
 function updateClock() {
     const now = new Date();
 
