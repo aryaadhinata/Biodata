@@ -23,3 +23,11 @@ setInterval(updateClock, 1000);
 
 // Menjalankan fungsi pertama kali saat halaman dimuat
 updateClock();
+
+const slideContainer = document.querySelector('.slide');
+
+// Toggle play and pause state on click
+slideContainer.addEventListener('click', function () {
+    const isPaused = getComputedStyle(slideContainer).animationPlayState === 'paused';
+    slideContainer.style.animationPlayState = isPaused ? 'running' : 'paused';
+});
