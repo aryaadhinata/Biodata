@@ -24,6 +24,36 @@ setInterval(updateClock, 1000);
 // Menjalankan fungsi pertama kali saat halaman dimuat
 updateClock();
 
+function updateElapsedTime() {
+    const startDate = new Date("2007-10-31T00:00:00");
+    const now = new Date();
+
+    let elapsed = now - startDate; // Waktu yang sudah berlalu dalam milidetik
+
+    const years = Math.floor(elapsed / (1000 * 60 * 60 * 24 * 365.25));
+    elapsed -= years * 1000 * 60 * 60 * 24 * 365.25;
+
+    const months = Math.floor(elapsed / (1000 * 60 * 60 * 24 * 30.4375));
+    elapsed -= months * 1000 * 60 * 60 * 24 * 30.4375;
+
+    const days = Math.floor(elapsed / (1000 * 60 * 60 * 24));
+    elapsed -= days * 1000 * 60 * 60 * 24;
+
+    const hours = Math.floor(elapsed / (1000 * 60 * 60));
+    elapsed -= hours * 1000 * 60 * 60;
+
+    const minutes = Math.floor(elapsed / (1000 * 60));
+    elapsed -= minutes * 1000 * 60;
+
+    const seconds = Math.floor(elapsed / 1000);
+
+    document.getElementById("old").textContent = 
+        `${years} years ${months} months ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+}
+
+// Perbarui waktu setiap detik
+setInterval(updateElapsedTime, 1000);
+
 const slideContainer = document.querySelector('.slide');
 
 // Toggle play and pause state on click
