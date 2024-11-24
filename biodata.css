@@ -5,31 +5,11 @@ Warna yang digunakan untuk website ini adalah:
 
 html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 100vh;
+    height: max-content;
     background: linear-gradient(#400FF2, #1F0E59);
     overflow-x: hidden;
 }
 
-table{
-    border-radius: 10px;
-    width: 300px;
-    height: 40px;
-}
-.tbl1{
-    background-color: #400FF2;
-}
-.tbl2{
-    background-color: #150940;
-}
-.tbl3{
-    background-color: #30168C;
-}
-.tbl4{
-    background-color: #1F0E59;
-}
-.tbl5{
-    background-color: #D2F25C;
-}
 
 .clock {
     font-size:100%;
@@ -59,12 +39,12 @@ table{
     width: 100%;
 }
 
-.artikel{
+.artikel {
     background: linear-gradient(#150940, #30168f);
     height: max-content;
     border-radius: 5%;
     padding: 5%;
-    margin-top: 2% ;
+    margin-top: 2%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -81,19 +61,19 @@ table{
 }
 
 .artikel img {
-    border: radius 20%;
+    border-radius: 20%;
     width: 50%;
     max-width: 250px;
     display: block;
     margin: 0 auto;
-    -webkit-box-shadow:0px 0px 100px 20px rgba(64,15,242,0.5);
-    -moz-box-shadow: 0px 0px 100px 20px rgba(64,15,242,0.5);
-    box-shadow: 0px 0px 100px 20px rgba(64,15,242,0.5);
+    -webkit-box-shadow: 0px 0px 100px 20px rgba(64, 15, 242, 0.5);
+    -moz-box-shadow: 0px 0px 100px 20px rgba(64, 15, 242, 0.5);
+    box-shadow: 0px 0px 100px 20px rgba(64, 15, 242, 0.5);
 }
 
-.text_profile{
+.text_profile {
     padding-top: 5%;
-    color: #D2F25C ;
+    color: #D2F25C;
     display: flex;
     justify-content: center;
     font-size: 110%;
@@ -101,7 +81,7 @@ table{
 
 @media (min-width: 750px) {
     .artikel {
-        flex-direction: row; 
+        flex-direction: row;
         align-items: center;
     }
     .text_profile {
@@ -115,16 +95,32 @@ table{
 .description {
     background-color: #400FF2;
     color: #D2F25C;
+    text-align: center;
     border-radius: 10%;
     padding: 5%;
 }
 
+.spacer {
+    height: fit-content;
+    padding-top: 100%;
+    position: absolute;
+}
+
 .slider-container {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease;
     overflow: hidden;
     width: max-content;
     position: relative;
     background-color: #D2F25C;
     padding: 5%;
+    margin-top: 50vh;
+}
+
+.slider-container.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .slide {
@@ -136,6 +132,7 @@ table{
     width: 500px;
     height: 250px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 @keyframes scroll {

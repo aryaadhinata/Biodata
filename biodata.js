@@ -61,3 +61,16 @@ slideContainer.addEventListener('click', function () {
     const isPaused = getComputedStyle(slideContainer).animationPlayState === 'paused';
     slideContainer.style.animationPlayState = isPaused ? 'running' : 'paused';
 });
+
+const sliderContainer = document.querySelector('.slider-container');
+
+window.addEventListener('scroll', () => {
+    const sliderTop = sliderContainer.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (sliderTop < windowHeight) {
+        sliderContainer.classList.add('show');
+    } else {
+        sliderContainer.classList.remove('show');
+    }
+});
