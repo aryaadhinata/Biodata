@@ -10,18 +10,20 @@ html, body {
     overflow-x: hidden;
 }
 
-
 .clock {
     font-size:100%;
     font-weight: 500;
     color: #150940;
     background-color: #D2F25C;
     height: 25% auto;
+    width: 100vh ;
     display: flex;
+    position: fixed;
     justify-content: space-between;
     padding: 0 10%;
     border-radius: 10px;
     animation: jam 2s cubic-bezier(0.5, 0, 0.75, 0) 1.5s 1 reverse none;
+    z-index: 1000;
 }
 
 @keyframes jam {
@@ -31,12 +33,6 @@ html, body {
     100% {
         transform: translateY(100px);
     }
-}
-
-.jam{
-    border-collapse: separate;
-    border-spacing: 10px 0;
-    width: 100%;
 }
 
 .artikel {
@@ -100,10 +96,11 @@ html, body {
     padding: 5%;
 }
 
-.spacer {
-    height: fit-content;
-    padding-top: 100%;
-    position: absolute;
+.text_highlight{
+    padding: 1% 5% 1%;
+    margin: 3% 0 3%;
+    background-color: #D2F25C;
+    color: #400FF2;
 }
 
 .slider-container {
@@ -115,7 +112,7 @@ html, body {
     position: relative;
     background-color: #D2F25C;
     padding: 5%;
-    margin-top: 50vh;
+    margin-top: 5vh;
 }
 
 .slider-container.show {
