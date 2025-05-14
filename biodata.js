@@ -62,6 +62,33 @@ slideContainer.addEventListener('click', function () {
     slideContainer.style.animationPlayState = isPaused ? 'running' : 'paused';
 });
 
+window.addEventListener('scroll', function () {
+    const highlights = document.querySelectorAll('.text_highlight');
+    const triggerPoint = window.innerHeight - 100;
+
+    highlights.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+
+        if (top < triggerPoint) {
+            el.classList.add('animate');
+        }
+    });
+});
+
+window.addEventListener('scroll', function () {
+    const contents = document.querySelectorAll('.content');
+    const triggerPoint = window.innerHeight - 100;
+
+    contents.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+
+        if (top < triggerPoint) {
+            el.classList.add('animate');
+        }
+    });
+});
+
+
 const sliderContainer = document.querySelector('.slider-container');
 
 window.addEventListener('scroll', () => {
